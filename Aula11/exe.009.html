@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de nacionalidades</title>
+    <style>
+        body{
+            background: green;
+            text-align: center;
+        }
+
+        div#res{
+            font: normal 20px Arial;
+            padding-top: 20px;
+        }
+
+        input#txtn{
+            border-radius: 5px;
+            width: 70%;
+            height: 20px;
+            text-align: center;
+        }
+
+        .conteiner{
+            background: white;
+            width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4x rgba(0, 0, 0, 0.407);
+        }
+
+
+    </style>
+</head>
+<body>
+    <main class="conteiner">
+    <h1>Verifique sua nacionalidade</h1>
+    <input type="text" name="txtn" id="txtn">
+    <input type="button" value="Calcular" onclick="Calcular()">
+    <div id="res">Nacionalidade</div>
+</main>
+    <script>
+        function Calcular(){
+            var res = document.querySelector('div#res')
+            var nac = document.querySelector('input#txtn')
+
+            if(nac.value.length === 0){
+                res.innerHTML = 'Por favor, digite sua nacionalidade'
+            }else if(nac.value === 'Brasil'){
+                res.innerHTML = 'Brasileiro'
+            }else{
+                res.innerHTML = 'Estrangeiro'
+            }
+
+        }
+    </script>
+</body>
+</html>
